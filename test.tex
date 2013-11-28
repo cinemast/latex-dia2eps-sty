@@ -1,0 +1,33 @@
+\documentclass[11pt]{scrartcl}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc} 
+\usepackage[ngerman]{babel}
+
+\usepackage{fixltx2e}
+\usepackage{dia2eps}
+
+\AtBeginDocument{\shorthandoff{"}}
+
+\title{\textbf{Dia2EPS Demo}}
+\author{Peter Spiess-Knafl}
+\date{\today}
+
+
+
+\usepackage{graphicx}
+\begin{document}
+\maketitle
+
+\section{Included as graphics}
+\includedia[scale=0.2]{Diagram1}
+
+
+\section{Wrapped into figure}
+\begin{figure}[h]
+\centering
+\includedia[scale=0.25]{Diagram1}
+\caption{Figure example}
+\end{figure}
+
+
+\end{document}

@@ -1,0 +1,23 @@
+% Author: Peter Spiess-Knafl <peter.knafl@gmail.com>
+\ProvidesPackage{dia2eps}
+
+\usepackage[pdftex]{graphicx}
+
+\newcommand{\includedia}[2][scale=1]{ %
+\ifnum\pdfshellescape=1
+  % Yes, enabled
+    \immediate\write18{bash -c "mkdir -p dia2eps"}
+    \immediate\write18{bash -c "dia -e dia2eps/#2.eps -t eps #2.dia"}
+    \IfFileExists{dia2eps/#2.eps}
+    { \includegraphics[#1]{dia2eps/#2} }
+    { \fbox{ \begin{tabular}{l}
+          The file \texttt{#2.eps} couldn't be created from \texttt{#2.dia}.
+        \end{tabular}}
+    }
+  \else
+    \fbox{ \begin{tabular}{l}
+            Please activate pdfshellescape!
+          \end{tabular}}
+  \fi
+}
+

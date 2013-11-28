@@ -1,4 +1,17 @@
 latex-dia2eps-sty
 =================
 
-Invokes dia eps export which can be embedded into latex documents automatically.
+This is a simplye .sty file which can be easily embedded into any latex document. It automatically grabs .dia files and exports them to .eps files, which is embeddable into latex documents.
+
+Requirements
+-------------
+* Linux
+* Dia
+* pdflatex
+* pdfshellescape enabled
+
+
+Usage 
+------
+
+    See test.tex file.
