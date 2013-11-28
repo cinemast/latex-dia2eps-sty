@@ -13,5 +13,7 @@ Requirements
 
 Usage 
 ------
+See test.tex file.
 
-    See test.tex file.
+Compile using:
+    pdflatex --shell-escape test.tex
